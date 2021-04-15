@@ -1,18 +1,16 @@
 ## complete path
 * greet
     - utter_greet
-* restaurant_search
-    - utter_ask_location
-* restaurant_search{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
+* restaurant_search{"location": "delhi","cuisine": "chinese","price":"mid"}
+    - slot{"location": "delhi","cuisine": "chinese","price":"mid"}
     - action_search_restaurants
-    - slot{"location": "delhi"}
-    - utter_goodbye
-    - export
-
+	- utter_check_email_results
+* affirm
+    - utter_ask_email
+* enter_email
+    - slot{"email": "test@gmail.com"}
+    - action_send_email
+	- utter_goodbye
 ## location specified
 * greet
     - utter_greet

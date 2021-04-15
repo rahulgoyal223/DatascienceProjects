@@ -37,6 +37,12 @@
 - hello
 - namaste
 
+## intent:enter_email
+- [test@yahoo.com](email)
+- email: [test@gmail.com](email)
+- email address: [test@live.com](email)
+- My email address is [test@gmail.com](email)
+
 ## intent:restaurant_search
 - i'm looking for a place to eat
 - I want to grab lunch
@@ -216,6 +222,8 @@
 ## regex:location
 - [0-9]{6}
 
+## regex:enter_email
+- [\w]+@[\w]+\.[\w]+
 
 
 
