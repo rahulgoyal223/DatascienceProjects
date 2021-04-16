@@ -76,6 +76,9 @@
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
 - can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
+- can you book a table in [Delhi](location) in a [low](price) price range with [Italian](cuisine) food
+- can you book a table in [Bangalore](location) in a [high](price) price range with [Mexican](cuisine) food
+- can you book a table in [Bangalore](location) in a [mid](price) price range with [Mexican](cuisine) food
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurantin [bangalore](location)
@@ -128,6 +131,7 @@
 - Gurugram
 - Gudgaon
 - Gurgao
+- Gudgawa
 
 ## synonym:Allahabad
 - Alahabad
@@ -144,6 +148,8 @@
 
 ## synonym:Puducherry
 - Pondicherry
+- Pondi
+- Puduchery
 
 ## synonym:Varanasi
 - Banaras
@@ -177,7 +183,7 @@
 - Indoor
 
 ## synonym:Ahmedabad
-- Ahmedabad
+- Amedabad
 
 ## synonym:Coimbatore
 - Kovai
@@ -196,11 +202,10 @@
 
 ## synonym:Kolkata
 - Calcutta
+- Calcuta
 
 ## synonym:Shimla
 - Simla
-
-## synonym:Shimla
 - Shyamala
 
 ## synonym:chinese
@@ -210,6 +215,18 @@
 
 ## synonym:mid
 - moderate
+- medium
+- affordable
+
+## synonym:low
+- cheap
+
+## synonym:high
+- expensive
+- highend
+- posh
+- luxurious
+- fancy
 
 ## synonym:vegetarian
 - veggie
@@ -224,10 +241,3 @@
 
 ## regex:enter_email
 - [\w]+@[\w]+\.[\w]+
-
-
-
-
-
-
-
