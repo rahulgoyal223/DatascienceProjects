@@ -1,9 +1,9 @@
 intents:
 - affirm
+- deny
 - restaurant_search
 - greet
 - goodbye
-- stop
 - enter_email
 entities:
 - cuisine
@@ -20,6 +20,8 @@ slots:
     type: text
   email:
     type: text 
+  searched_result:
+    type: text
 responses:
   utter_ask_cuisine:
   - buttons:
@@ -55,6 +57,7 @@ responses:
   - text: Do you want to send results by email?   
 actions:
 - action_search_restaurants
+- action_send_email
 - action_send_mail
 - utter_ask_cuisine
 - utter_ask_howcanhelp

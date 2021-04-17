@@ -12,6 +12,14 @@
 - sounds really good
 - thanks
 - thanks
+- cool
+
+## intent:deny
+- no
+- not interested
+- dismiss
+- disapprove
+- nah
 
 ## intent:goodbye
 - bye
@@ -42,6 +50,7 @@
 - email: [test@gmail.com](email)
 - email address: [test@live.com](email)
 - My email address is [test@gmail.com](email)
+- email [test@gmail.com](email)
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -92,6 +101,8 @@
 - [delhi](location)
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
+- please find [mid](price) [Mexican](cuisine) restaurant in [delhi](location)
+
 
 ## synonym:1
 - one
@@ -153,6 +164,9 @@
 
 ## synonym:Varanasi
 - Banaras
+
+## synonym:Nashik
+- Nasik
 
 ## synonym:Vadodara
 - Baroda
