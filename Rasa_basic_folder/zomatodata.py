@@ -24,21 +24,22 @@ def get_price(price):
         price=int(price)
         if price <300:price='low'
         elif price>700:price='high'
-        else: price='medium'
+        else: price='mid'
     return price
         
 def restaurant_search(city,cuisine, price):
-    price = get_price(price);
-    data = ZomatoData.loc[(ZomatoData['City']==city) & (ZomatoData['Price_Range']==price) & (ZomatoData['Cuisines'].str.contains(cuisine)),['Restaurant Name','Address','Aggregate rating','Average Cost for two']].sort_values(by='Aggregate rating',ascending=False).head(5)
+    price = get_price(price)
+    print(city,cuisine,price)
+    data = ZomatoData.loc[(ZomatoData['City']==city) & (ZomatoData['Price_Range']==price) & (ZomatoData['Cuisines'].str.contains(cuisine)),['Restaurant Name','Address','Average Cost for two','Aggregate rating']].sort_values(by='Aggregate rating',ascending=False).head(5)
     global restaurants
     restaurants=''
     restaurant_data = data.values.tolist()
     if len(restaurant_data)==0:restaurants= "No results found!"
     else :
         for restaurant in restaurant_data:
-            restaurants=restaurants + "----{} in {} has been rated {}--- \n\n".format(restaurant[0],restaurant[1],restaurant[2])
+            restaurants=restaurants + "----{} in {} with average budget for two people: Rs {} has been rated {}--- \n\n".format(restaurant[0],restaurant[1],restaurant[2],restaurant[3])
     print(restaurants)
 
 #print(city_check('new delhi'))
-#restaurant_search('new delhi','chinese','mid')
+#restaurant_search('bangalore','indian','low')
 #print(get_restaurant())

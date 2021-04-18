@@ -5,6 +5,7 @@ intents:
 - greet
 - goodbye
 - enter_email
+- out_of_scope
 entities:
 - cuisine
 - location
@@ -42,8 +43,8 @@ responses:
   - text: how can I help you?
   utter_ask_location:
   - text: In what location?
-  utter_default:
-  - text: i cannot understand
+  utter_out_of_scope:
+  - text: Sorry, I did not get what you said. Please rephrase what you said.
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
@@ -55,14 +56,23 @@ responses:
   - text: Please enter your email address
   utter_check_email_results:
   - text: Do you want to send results by email?   
+  utter_ask_price:
+  - buttons:
+    - payload: low
+      title: Lesser than Rs. 300
+    - payload: mid
+      title: Rs. 300 to 700
+    - payload: high
+      title: More than 700
+    text: What price range are you looking at?
 actions:
 - action_search_restaurants
 - action_send_email
-- action_send_mail
+- action_slot_reset
 - utter_ask_cuisine
 - utter_ask_howcanhelp
 - utter_ask_location
-- utter_default
+- utter_out_of_scope
 - utter_goodbye
 - utter_greet
 - utter_ask_price

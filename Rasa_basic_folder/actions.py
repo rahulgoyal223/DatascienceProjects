@@ -6,6 +6,7 @@ import sendemail as emailutility
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 import json
+from rasa_sdk.events import AllSlotsReset
 
   
 class ActionSearchRestaurants(Action):
@@ -20,7 +21,7 @@ class ActionSearchRestaurants(Action):
 
         dispatcher.utter_message("location: {} cuisine: {} price_range: {}".format(loc,cuisine,price_range))
         if data.city_check(loc):
-            data.restaurant_search(city=loc,cuisine=cuisine,price = price_range)
+            data.restaurant_search(city=loc.lower(),cuisine=cuisine.lower(),price = price_range.lower())
             dispatcher.utter_message(data.get_restaurant())
         else:dispatcher.utter_message("Sorry, this city is not serviceable.")
 
@@ -37,3 +38,9 @@ class ActionSendMail(Action):
         dispatcher.utter_message(mail_id)
         emailutility.send_email(mail_id,data.get_restaurant())
         dispatcher.utter_message('Message sent successfully')
+
+class AllSlotsReset(Action):
+	def name(self):
+		return 'action_slot_reset'
+	def run(self, dispatcher, tracker, domain):
+		return[AllSlotsReset()]

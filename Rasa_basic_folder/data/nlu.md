@@ -20,6 +20,7 @@
 - dismiss
 - disapprove
 - nah
+- n
 
 ## intent:goodbye
 - bye
@@ -56,12 +57,12 @@
 - i'm looking for a place to eat
 - I want to grab lunch
 - I am searching for a dinner spot
-- I am looking for some restaurants in [Delhi](location).
+- I am looking for some restaurants in [New Delhi](location).
 - I am looking for some restaurants in [Bangalore](location)
 - show me [chinese](cuisine) restaurants
-- show me [chines](cuisine:chinese) restaurants in the [New Delhi](location:Delhi)
+- show me [chines](cuisine:chinese) restaurants in the [Delhi](location:New Delhi)
 - show me a [mexican](cuisine) place in the [centre](location)
-- i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
+- i am looking for an [North Indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
 - anywhere in the [west](location)
 - I am looking a restaurant in [455462](location)
@@ -90,7 +91,7 @@
 - can you book a table in [Bangalore](location) in a [mid](price) price range with [Mexican](cuisine) food
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
-- Please find me a restaurantin [bangalore](location)
+- Please find me a restaurant in [bangalore](location)
 - [mumbai](location)
 - [Chinese](cuisine:chinese)
 - show me restaurants
@@ -102,8 +103,14 @@
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - please find [mid](price) [Mexican](cuisine) restaurant in [delhi](location)
-
-
+- [Bengaluru](location:Bangalore)
+- [Banglore](location:Bangalore)
+- please find me a [posh](price:high) [Mexican](cuisine) restaurant
+- please find me a [cheap](price:low) [South Indian](cuisine) restaurant
+- can you book a table in [Bangalore](location) in a [affordable](price:mid) price range with [Italian](cuisine) food
+## intent:out_of_scope
+- What is 2 + 2?
+- Who's the US President?
 ## synonym:1
 - one
 
@@ -131,8 +138,8 @@
 ## synonym:9
 - nine
 
-## synonym:Delhi
-- New Delhi
+## synonym:New Delhi
+- Delhi
 
 ## synonym:Bangalore
 - Bengaluru
@@ -192,12 +199,6 @@
 - Cochin
 - Ernakulam
 - Eranakulam
-
-## synonym:Indore
-- Indoor
-
-## synonym:Ahmedabad
-- Amedabad
 
 ## synonym:Coimbatore
 - Kovai

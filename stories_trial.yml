@@ -1,0 +1,33 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: North Indian
+    - location: New Delhi
+  - slot_was_set:
+    - cuisine: North Indian
+  - slot_was_set:
+    - location: New Delhi
+  - action: utter_ask_price
+  - intent: affirm
+    entities:
+    - price: low
+  - slot_was_set:
+    - price: low
+  - action: action_search_restaurants
+  - action: utter_check_email_results
+  - intent: affirm
+  - action: utter_ask_email
+  - intent: affirm
+  - action: utter_ask_email
+  - intent: enter_email
+    entities:
+    - email: sumiran2603@gmail.com
+  - slot_was_set:
+    - email: sumiran2603@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - action: action_slot_reset

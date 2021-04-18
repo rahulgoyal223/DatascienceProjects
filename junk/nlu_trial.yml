@@ -1,0 +1,12 @@
+version: "2.0"
+nlu:
+- intent: restaurant_search
+  examples: |
+    - Find me a [North Indian](cuisine) Restaurant in [Delhi]{"entity": "location", "value": "New Delhi"}
+- intent: affirm
+  examples: |
+    - [low](price)
+    - yes
+- intent: enter_email
+  examples: |
+    - [sumiran2603@gmail.com](email)
