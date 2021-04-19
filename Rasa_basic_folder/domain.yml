@@ -1,28 +1,37 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
+- enter_email
 - affirm
-- deny
 - restaurant_search
 - greet
+- deny
 - goodbye
-- enter_email
 - out_of_scope
 entities:
 - cuisine
-- location
-- price
-- people
 - email
+- location
+- people
+- price
 slots:
   cuisine:
     type: text
+    influence_conversation: true
   location:
     type: text
+    influence_conversation: true
   price:
     type: text
+    influence_conversation: true
   email:
-    type: text 
+    type: text
+    influence_conversation: true
   searched_result:
     type: text
+    influence_conversation: true
 responses:
   utter_ask_cuisine:
   - buttons:
@@ -55,7 +64,7 @@ responses:
   utter_ask_email:
   - text: Please enter your email address
   utter_check_email_results:
-  - text: Do you want to send results by email?   
+  - text: Do you want to send results by email?
   utter_ask_price:
   - buttons:
     - payload: low
@@ -70,11 +79,11 @@ actions:
 - action_send_email
 - action_slot_reset
 - utter_ask_cuisine
+- utter_ask_email
 - utter_ask_howcanhelp
 - utter_ask_location
-- utter_out_of_scope
+- utter_ask_price
+- utter_check_email_results
 - utter_goodbye
 - utter_greet
-- utter_ask_price
-- utter_ask_email
-- utter_check_email_results
+- utter_out_of_scope

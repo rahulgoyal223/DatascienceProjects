@@ -11,7 +11,6 @@
 - great choice
 - sounds really good
 - thanks
-- thanks
 - cool
 
 ## intent:deny
@@ -41,10 +40,8 @@
 - good morning
 - good evening
 - dear sir
-- hi
-- hi
-- hello
 - namaste
+- Hi
 
 ## intent:enter_email
 - [test@yahoo.com](email)
@@ -52,6 +49,7 @@
 - email address: [test@live.com](email)
 - My email address is [test@gmail.com](email)
 - email [test@gmail.com](email)
+- [sumiran2603@gmil.com](email)
 
 ## intent:restaurant_search
 - i'm looking for a place to eat
@@ -60,7 +58,7 @@
 - I am looking for some restaurants in [New Delhi](location).
 - I am looking for some restaurants in [Bangalore](location)
 - show me [chinese](cuisine) restaurants
-- show me [chines](cuisine:chinese) restaurants in the [Delhi](location:New Delhi)
+- show me [chines]{"entity": "cuisine", "value": "chinese"} restaurants in the [Delhi]{"entity": "location", "value": "New Delhi"}
 - show me a [mexican](cuisine) place in the [centre](location)
 - i am looking for an [North Indian](cuisine) spot called olaolaolaolaolaola
 - search for restaurants
@@ -78,14 +76,14 @@
 - [South Indian](cuisine)
 - [North Indian](cuisine)
 - [Italian](cuisine)
-- [Chinese](cuisine:chinese)
+- [Chinese]{"entity": "cuisine", "value": "chinese"}
 - [chinese](cuisine)
 - [Lithuania](location)
 - Oh, sorry, in [Italy](location)
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
-- can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
+- can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
 - can you book a table in [Delhi](location) in a [low](price) price range with [Italian](cuisine) food
 - can you book a table in [Bangalore](location) in a [high](price) price range with [Mexican](cuisine) food
 - can you book a table in [Bangalore](location) in a [mid](price) price range with [Mexican](cuisine) food
@@ -93,24 +91,32 @@
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurant in [bangalore](location)
 - [mumbai](location)
-- [Chinese](cuisine:chinese)
 - show me restaurants
-- [mumbai](location)
-- [Italian](cuisine)
 - please find me [chinese](cuisine) restaurant in [delhi](location)
 - can you find me a [chinese](cuisine) restaurant
 - [delhi](location)
 - please find me a restaurant in [ahmedabad](location)
 - please show me a few [italian](cuisine) restaurants in [bangalore](location)
 - please find [mid](price) [Mexican](cuisine) restaurant in [delhi](location)
-- [Bengaluru](location:Bangalore)
-- [Banglore](location:Bangalore)
-- please find me a [posh](price:high) [Mexican](cuisine) restaurant
-- please find me a [cheap](price:low) [South Indian](cuisine) restaurant
-- can you book a table in [Bangalore](location) in a [affordable](price:mid) price range with [Italian](cuisine) food
+- [Bengaluru]{"entity": "location", "value": "Bangalore"}
+- [Banglore]{"entity": "location", "value": "Bangalore"}
+- please find me a [posh]{"entity": "price", "value": "high"} [Mexican](cuisine) restaurant
+- please find me a [cheap]{"entity": "price", "value": "low"} [South Indian](cuisine) restaurant
+- can you book a table in [Bangalore](location) in a [affordable]{"entity": "price", "value": "mid"} price range with [Italian](cuisine) food
+- Find me a restaurant
+- Find a restaurant in [Nagaland](location)
+- [Mexican](cuisine)
+- [mid](price)
+- Find me a restaurant in [Nagaland](location)
+- [high](price)
+- Find me  [Chinese]{"entity": "cuisine", "value": "chinese"} restaurant in Assam
+- Find me an [Italian](cuisine) restaurant in [Mumbai](location)
+- [high](price)
+
 ## intent:out_of_scope
 - What is 2 + 2?
 - Who's the US President?
+
 ## synonym:1
 - one
 
@@ -138,12 +144,21 @@
 ## synonym:9
 - nine
 
-## synonym:New Delhi
-- Delhi
+## synonym:Allahabad
+- Alahabad
 
 ## synonym:Bangalore
 - Bengaluru
 - Banglore
+
+## synonym:Chennai
+- Madras
+
+## synonym:Coimbatore
+- Kovai
+
+## synonym:Dehradun
+- Deradun
 
 ## synonym:Gurgaon
 - Gurugram
@@ -151,8 +166,29 @@
 - Gurgao
 - Gudgawa
 
-## synonym:Allahabad
-- Alahabad
+## synonym:Guwahati
+- Guwhati
+
+## synonym:Jaipur
+- Pink City
+
+## synonym:Kanpur
+- Kanpoor
+- Cawnpore
+
+## synonym:Kochi
+- Cochin
+- Ernakulam
+- Eranakulam
+
+## synonym:Kolkata
+- Calcutta
+- Calcuta
+
+## synonym:Ludhiana
+- Ludiana
+- Ludhiyana
+- Ludiyana
 
 ## synonym:Mangalore
 - Mangaluru
@@ -164,95 +200,65 @@
 ## synonym:Mysore
 - Mysuru
 
+## synonym:Nashik
+- Nasik
+
+## synonym:New Delhi
+- Delhi
+
 ## synonym:Puducherry
 - Pondicherry
 - Pondi
 - Puduchery
 
-## synonym:Varanasi
-- Banaras
+## synonym:Pune
+- Puna
 
-## synonym:Nashik
-- Nasik
+## synonym:Shimla
+- Simla
+- Shyamala
 
 ## synonym:Vadodara
 - Baroda
 
-## synonym:Dehradun
-- Deradun
+## synonym:Varanasi
+- Banaras
 
 ## synonym:Vizag
 - Vishakhapatnam
 - Visakhapatnam
 - Vishakapatnam
 
-## synonym:Ludhiana
-- Ludiana
-- Ludhiyana
-- Ludiyana
-
-## synonym:Kanpur
-- Kanpoor
-- Cawnpore
-
-## synonym:Kochi
-- Cochin
-- Ernakulam
-- Eranakulam
-
-## synonym:Coimbatore
-- Kovai
-
-## synonym:Chennai
-- Madras
-
-## synonym:Guwahati
-- Guwhati	
-	
-## synonym:Jaipur
-- Pink City
-
-## synonym:Pune
-- Puna
-
-## synonym:Kolkata
-- Calcutta
-- Calcuta
-
-## synonym:Shimla
-- Simla
-- Shyamala
-
 ## synonym:chinese
 - chines
 - Chinese
 - Chines
 
-## synonym:mid
-- moderate
-- medium
-- affordable
+## synonym:high
+- posh
+- expensive
+- highend
+- luxurious
+- fancy
 
 ## synonym:low
 - cheap
 
-## synonym:high
-- expensive
-- highend
-- posh
-- luxurious
-- fancy
+## synonym:mid
+- moderate
+- affordable
+- medium
 
 ## synonym:vegetarian
 - veggie
 - vegg
 - vegan
 
+## regex:enter_email
+- ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$
+
 ## regex:greet
 - hey[^\s]*
 
 ## regex:location
 - [0-9]{6}
-
-## regex:enter_email
-- [\w]+@[\w]+\.[\w]+
