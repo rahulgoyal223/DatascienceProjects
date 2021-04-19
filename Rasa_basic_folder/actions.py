@@ -22,7 +22,7 @@ class ActionSearchRestaurants(Action):
         dispatcher.utter_message("location: {} cuisine: {} price_range: {}".format(loc,cuisine,price_range))
         if data.city_check(loc):
             data.restaurant_search(city=loc.lower(),cuisine=cuisine.lower(),price = price_range.lower())
-            dispatcher.utter_message(data.get_restaurant())
+            dispatcher.utter_message(data.restaurant_data(data.get_restaurant(),5))
         else:
             dispatcher.utter_message("Sorry, this city is not serviceable.")
             return[SlotSet('email',None),SlotSet('cuisine',None),SlotSet('location',None),SlotSet('price',None)]
@@ -37,7 +37,7 @@ class ActionSendMail(Action):
         mail_id = tracker.get_slot('email')
         dispatcher.utter_message(data.get_restaurant())
         dispatcher.utter_message(mail_id)
-        emailutility.send_email(mail_id,data.get_restaurant())
+        emailutility.send_email(mail_id,data.restaurant_data(data.get_restaurant(),10))
         dispatcher.utter_message('Message sent successfully')
         return[AllSlotsReset()]
 
@@ -45,4 +45,4 @@ class AllSlotsReset(Action):
 	def name(self):
 		return 'action_slot_reset'
 	def run(self, dispatcher, tracker, domain):
-         return[SlotSet('email',None),SlotSet('cuisine',None),SlotSet('location',None),SlotSet('price',None)]       
+        return[SlotSet('email',None),SlotSet('cuisine',None),SlotSet('location',None),SlotSet('price',None)]
