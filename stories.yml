@@ -1,0 +1,76 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: agra
+  - slot_was_set:
+    - location: agra
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_price
+  - intent: goodbye
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - action: utter_check_email_results
+  - intent: enter_email
+    entities:
+    - email: rahul.goyal223@live.com
+  - slot_was_set:
+    - email: rahul.goyal223@live.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - action: action_restart
+
+version: "2.0"
+stories:
+- story: interactive_story_2
+  steps:
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: New Delhi
+  - slot_was_set:
+    - location: New Delhi
+  - action: utter_ask_cuisine
+  - action: utter_ask_price
+  - intent: goodbye
+    entities:
+    - price: mid
+  - slot_was_set:
+    - price: mid
+  - action: action_search_restaurants
+  - intent: affirm
+  - action: utter_ask_email
+  - intent: enter_email
+    entities:
+    - email: rahul.goyal223@live.com
+  - slot_was_set:
+    - email: rahul.goyal223@live.com
+  - action: action_send_email
+  - action: utter_goodbye

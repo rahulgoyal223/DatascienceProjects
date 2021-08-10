@@ -83,10 +83,7 @@
 - in [delhi](location)
 - I am looking for some restaurants in [Mumbai](location)
 - I am looking for [mexican indian fusion](cuisine)
-- can you book a table in [rome](location) in a [moderate]{"entity": "price", "value": "mid"} price range with [british](cuisine) food for [four]{"entity": "people", "value": "4"} people
-- can you book a table in [Delhi](location) in a [low](price) price range with [Italian](cuisine) food
-- can you book a table in [Bangalore](location) in a [high](price) price range with [Mexican](cuisine) food
-- can you book a table in [Bangalore](location) in a [mid](price) price range with [Mexican](cuisine) food
+- can you book a table in [rome](location) in a [moderate](price:mid) price range with [british](cuisine) food for [four](people:4) people
 - [central](location) [indian](cuisine) restaurant
 - please help me to find restaurants in [pune](location)
 - Please find me a restaurant in [bangalore](location)
@@ -164,7 +161,6 @@
 - Gurugram
 - Gudgaon
 - Gurgao
-- Gudgawa
 
 ## synonym:Guwahati
 - Guwhati
@@ -208,8 +204,6 @@
 
 ## synonym:Puducherry
 - Pondicherry
-- Pondi
-- Puduchery
 
 ## synonym:Pune
 - Puna
@@ -229,17 +223,69 @@
 - Visakhapatnam
 - Vishakapatnam
 
+<<<<<<< HEAD
+=======
+## synonym:Ludhiana
+- Ludiana
+- Ludhiyana
+- Ludiyana
+
+## synonym:Kanpur
+- Kanpoor
+- Cawnpore
+
+## synonym:Kochi
+- Cochin
+- Ernakulam
+- Eranakulam
+
+## synonym:Indore
+- Indoor
+
+## synonym:Ahmedabad
+- Ahmedabad
+
+## synonym:Coimbatore
+- Kovai
+
+## synonym:Chennai
+- Madras
+
+## synonym:Guwahati
+- Guwhati	
+	
+## synonym:Jaipur
+- Pink City
+
+## synonym:Pune
+- Puna
+
+## synonym:Kolkata
+- Calcutta
+
+## synonym:Shimla
+- Simla
+
+## synonym:Shimla
+- Shyamala
+
+>>>>>>> parent of 28e2eaf... Rasa
 ## synonym:chinese
 - chines
 - Chinese
 - Chines
 
+<<<<<<< HEAD
 ## synonym:high
 - posh
 - expensive
 - highend
 - luxurious
 - fancy
+=======
+## synonym:mid
+- moderate
+>>>>>>> parent of 28e2eaf... Rasa
 
 ## synonym:low
 - cheap
@@ -262,3 +308,16 @@
 
 ## regex:location
 - [0-9]{6}
+<<<<<<< HEAD
+=======
+
+## regex:enter_email
+- [\w]+@[\w]+\.[\w]+
+
+
+
+
+
+
+
+>>>>>>> parent of 28e2eaf... Rasa

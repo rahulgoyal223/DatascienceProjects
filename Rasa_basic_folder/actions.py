@@ -8,7 +8,6 @@ from rasa_sdk.events import SlotSet
 import json
 from rasa_sdk.events import AllSlotsReset
 
-  
 class ActionSearchRestaurants(Action):
     
     def name(self):

@@ -1,0 +1,19 @@
+version: "2.0"
+nlu:
+- intent: restaurant_search
+  examples: |
+    - please find me restaurants
+    - [Chinese]{"entity": "cuisine", "value": "chinese"}
+    - [agra](location)
+    - [Italian](cuisine)
+    - show me restaurants
+    - [delhi]{"entity": "location", "value": "New Delhi"}
+- intent: goodbye
+  examples: |
+    - [mid](price)
+- intent: enter_email
+  examples: |
+    - [rahul.goyal223@live.com](email)
+- intent: affirm
+  examples: |
+    - yes

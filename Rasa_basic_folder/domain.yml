@@ -63,17 +63,6 @@ responses:
   - text: Hey, How is it going. How May I help you Today
   utter_ask_email:
   - text: Please enter your email address
-  utter_check_email_results:
-  - text: Do you want to send results by email?
-  utter_ask_price:
-  - buttons:
-    - payload: low
-      title: Lesser than Rs. 300
-    - payload: mid
-      title: Rs. 300 to 700
-    - payload: high
-      title: More than 700
-    text: What price range are you looking at?
 actions:
 - action_search_restaurants
 - action_send_email
@@ -86,4 +75,5 @@ actions:
 - utter_check_email_results
 - utter_goodbye
 - utter_greet
-- utter_out_of_scope
+- utter_ask_price
+- utter_ask_email

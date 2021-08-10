@@ -50,3 +50,4 @@ def restaurant_data(restaurants,len_data):
 #print(city_check('new delhi'))
 #restaurant_search('new delhi','indian','low')
 #print(restaurant_data(get_restaurant(),5))
+
